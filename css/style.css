@@ -1,0 +1,52 @@
+body {
+    font-family: "Noto Sans", sans-serif;
+}
+
+pre, code, .cell {
+    font-weight: 300;
+    font-family: "Source Code Pro", monospace;
+}
+
+header {
+    background-color: #eee;
+    border-top: 5px solid #2e55a5;
+}
+
+header .brand {
+    color: #2e55a5;
+    font-family: "Alice", serif;
+    font-size: 3em;
+    text-shadow: 0.025em 0.025em 0 #eee,
+                 0.05em  0.05em  0 #b5b5b5;
+}
+
+header .tagline {
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+header .clicky-button {
+    background-color: #2e55a5;
+    color: #eee;
+}
+header .clicky-button:active,
+header .clicky-button:focus,
+header .clicky-button:hover {
+    background-color: #3d71d9;
+}
+
+main .flexy-row .cell {
+    background-color: #eee;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0.5rem;
+}
+
+main .flexy-row .flexy-row .cell {
+    background-color: #ddd;
+}
+
+main .flexy-row .flexy-row .flexy-row .cell {
+    background-color: #ccc;
+}

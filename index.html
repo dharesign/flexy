@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flexy &mdash; a flexbox-based grid system</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Noto+Sans:400,400i,700,700i|Source+Code+Pro:300">
+    <link rel="stylesheet" href="css/clicky/clicky.css">
+    <link rel="stylesheet" href="css/flexy/flexy.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="flexy-grid flexy-gutters">
+            <div class="flexy-row flexy-row-xs-baseline flexy-row-xs-center">
+                <div class="brand flexy-col-xs-6 flexy-col-sm-packed flexy-col-xs-center">Flexy</div>
+                <div class="tagline flexy-col-xs-6 flexy-col-sm flexy-col-xs-center flexy-col-sm-left">a flexbox-based grid system</div>
+                <div class="flexy-col-xs-6 flexy-col-sm-packed flexy-col-xs-center">
+                    <a href="https://github.com/dharesign/flexy" class="clicky-button">
+                        <i class="clicky-icon fa fa-github"></i>
+                        <span class="clicky-label">GitHub Project</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="flexy-grid">
+                <div class="flexy-row">
+                    <div class="flexy-col-sm-6">
+                        <h1>What is flexy?</h1>
+                        <p>
+                            Flexy is a flexbox-based grid system. I wrote it
+                            after failing to find an existing solution which
+                            exactly matched my requirements. I wanted something
+                            very minimal (just a grid system), with no
+                            vendor-specific prefix as I deem them
+                            <a href="http://caniuse.com/#feat=flexbox">no
+                            longer necessary</a>. I also wanted sizes to be
+                            specified in <code>rem</code> units.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="flexy-grid">
+                <div class="flexy-row">
+                    <div class="flexy-col-xs-6">
+                        <h1>How do I use it?</h1>
+                        <p>
+                            Flexy is available
+                            <a href="https://github.com/dharesign/flexy">on
+                            GitHub</a>. The <code>master</code> branch contains
+                            a single <code>flexy.css</code> file which you
+                            should download and include in your project as
+                            usual.
+                        </p>
+                        <p>
+                            Below is a collection of examples of all of the
+                            different classes available.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flexy-grid">
+                <div class="flexy-row">
+                    <div class="flexy-col-xs-6">
+                        <h2>Structure</h2>
+                        <p>
+                            Flexy is used by specifying the relevant classes.
+                            All classes are prefixed by <code>flexy-</code>.
+                        </p>
+                        <p>
+                            Flexy splits the grid into six columns.
+                        </p>
+                        <p>
+                            Flexy defines four responsive breakpoints, with the
+                            relevant classes being:
+                        </p>
+                        <ul>
+                            <li><code>*-xs-*</code>: Always applies</li>
+                            <li><code>*-sm-*</code>: Applies above <code>48rem</code></li>
+                            <li><code>*-md-*</code>: Applies above <code>62rem</code></li>
+                            <li><code>*-lg-*</code>: Applies above <code>76rem</code></li>
+                        </ul>
+                        <p>
+                            Below a given breakpoint, columns defined with the
+                            relevant class degrade to be stacked vertically
+                            taking up the entire width available.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flexy-grid">
+                <div class="flexy-row">
+                    <div class="flexy-col-xs-6">
+                        <h3>Simple Example</h3>
+                        <p>
+                            All of the examples found below follow the same
+                            basic structure:
+<pre>
+    &lt;div class="flexy-grid"&gt;
+        &lt;div class="flexy-row"&gt;
+            &lt;div class="flexy-col-xs-6"&gt;
+                content
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</pre>
+                        </p>
+                        <p>
+                            In this first example, we show four grids&mdash;one
+                            for each breakpoint&mdash;each having six rows
+                            showing a variety of possible combinations. If
+                            possible, resize your window to see how the grids
+                            interact with the various breakpoints.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flexy-grid flexy-gutters">
+                <div class="flexy-row">
+                    <div class="flexy-col-xs-1">
+                        <div class="cell">.flexy-col-xs-1</div>
+                     </div>
+                    <div class="flexy-col-xs-5">
+                        <div class="cell">.flexy-col-xs-5</div>
+                     </div>
+                </div>
+                <div class="flexy-row">
+                    <div class="flexy-col-xs-2">
+                        <div class="cell">.flexy-col-xs-2</div>
+                     </div>
+                    <div class="flexy-col-xs-4">
+                        <div class="cell">.flexy-col-xs-4</div>
+                     </div>
+                </div>
+                <div class="flexy-row">
+                    <div class="flexy-col-xs-3">
+                        <div class="cell">.flexy-col-xs-3</div>
+                     </div>
+                    <div class="flexy-col-xs-3">
+                        <div class="cell">.flexy-col-xs-3</div>
+                     </div>
+                </div>
+                <div class="flexy-row">
+                    <div class="flexy-col-xs-4">
+                        <div class="cell">.flexy-col-xs-4</div>
+                     </div>
+                    <div class="flexy-col-xs-2">
+                        <div class="cell">.flexy-col-xs-2</div>
+                     </div>
+                </div>
+                <div class="flexy-row">
+                    <div class="flexy-col-xs-5">
+                        <div class="cell">.flexy-col-xs-5</div>
+                     </div>
+                    <div class="flexy-col-xs-1">
+                        <div class="cell">.flexy-col-xs-1</div>
+                     </div>
+                </div>
+                <div class="flexy-row">
+                    <div class="flexy-col-xs-6">
+                        <div class="cell">.flexy-col-xs-6</div>
+                     </div>
+                </div>
+            </div>
+
+            <div class="flexy-grid flexy-gutters">
+                <div class="flexy-row">
+                    <div class="flexy-col-sm-1">
+                        <div class="cell">.flexy-col-sm-1</div>
+                     </div>
+                    <div class="flexy-col-sm-5">
+                        <div class="cell">.flexy-col-sm-5</div>
+                     </div>
+                </div>
+                <div class="flexy-row">
+                    <div class="flexy-col-sm-2">
+                        <div class="cell">.flexy-col-sm-2</div>
+                     </div>
+                    <div class="flexy-col-sm-4">
+                        <div class="cell">.flexy-col-sm-4</div>
+                     </div>
+                </div>
+                <div class="flexy-row">
+                    <div class="flexy-col-sm-3">
+                        <div class="cell">.flexy-col-sm-3</div>
+                     </div>
+                    <div class="flexy-col-sm-3">
+                        <div class="cell">.flexy-col-sm-3</div>
+                     </div>
+                </div>
+                <div class="flexy-row">
+                    <div class="flexy-col-sm-4">
+                        <div class="cell">.flexy-col-sm-4</div>
+                     </div>
+                    <div class="flexy-col-sm-2">
+                        <div class="cell">.flexy-col-sm-2</div>
+                     </div>
+                </div>
+                <div class="flexy-row">
+                    <div class="flexy-col-sm-5">
+                        <div class="cell">.flexy-col-sm-5</div>
+                     </div>
+                    <div class="flexy-col-sm-1">
+                        <div class="cell">.flexy-col-sm-1</div>
+                     </div>
+                </div>
+                <div class="flexy-row">
+                    <div class="flexy-col-sm-6">
+                        <div class="cell">.flexy-col-sm-6</div>
+                     </div>
+                </div>
+            </div>
+
+            <div class="flexy-grid flexy-gutters">
+                <div class="flexy-row">
+                    <div class="flexy-col-md-1">
+                        <div class="cell">.flexy-col-md-1</div>
+                     </div>
+                    <div class="flexy-col-md-5">
+                        <div class="cell">.flexy-col-md-5</div>
+                     </div>
+                </div>
+                <div class="flexy-row">
+                    <div class="flexy-col-md-2">
+                        <div class="cell">.flexy-col-md-2</div>
+                     </div>
+                    <div class="flexy-col-md-4">
+                        <div class="cell">.flexy-col-md-4</div>
+                     </div>
+                </div>
+                <div class="flexy-row">
+                    <div class="flexy-col-md-3">
+                        <div class="cell">.flexy-col-md-3</div>
+                     </div>
+                    <div class="flexy-col-md-3">
+                        <div class="cell">.flexy-col-md-3</div>
+                     </div>
+                </div>
+                <div class="flexy-row">
+                    <div class="flexy-col-md-4">
+                        <div class="cell">.flexy-col-md-4</div>
+                     </div>
+                    <div class="flexy-col-md-2">
+                        <div class="cell">.flexy-col-md-2</div>
+                     </div>
+                </div>
+                <div class="flexy-row">
+                    <div class="flexy-col-md-5">
+                        <div class="cell">.flexy-col-md-5</div>
+                     </div>
+                    <div class="flexy-col-md-1">
+                        <div class="cell">.flexy-col-md-1</div>
+                     </div>
+                </div>
+                <div class="flexy-row">
+                    <div class="flexy-col-md-6">
+                        <div class="cell">.flexy-col-md-6</div>
+                     </div>
+                </div>
+            </div>
+
+            <div class="flexy-grid flexy-gutters">
+                <div class="flexy-row">
+                    <div class="flexy-col-lg-1">
+                        <div class="cell">.flexy-col-lg-1</div>
+                     </div>
+                    <div class="flexy-col-lg-5">
+                        <div class="cell">.flexy-col-lg-5</div>
+                     </div>
+                </div>
+                <div class="flexy-row">
+                    <div class="flexy-col-lg-2">
+                        <div class="cell">.flexy-col-lg-2</div>
+                     </div>
+                    <div class="flexy-col-lg-4">
+                        <div class="cell">.flexy-col-lg-4</div>
+                     </div>
+                </div>
+                <div class="flexy-row">
+                    <div class="flexy-col-lg-3">
+                        <div class="cell">.flexy-col-lg-3</div>
+                     </div>
+                    <div class="flexy-col-lg-3">
+                        <div class="cell">.flexy-col-lg-3</div>
+                     </div>
+                </div>
+                <div class="flexy-row">
+                    <div class="flexy-col-lg-4">
+                        <div class="cell">.flexy-col-lg-4</div>
+                     </div>
+                    <div class="flexy-col-lg-2">
+                        <div class="cell">.flexy-col-lg-2</div>
+                     </div>
+                </div>
+                <div class="flexy-row">
+                    <div class="flexy-col-lg-5">
+                        <div class="cell">.flexy-col-lg-5</div>
+                     </div>
+                    <div class="flexy-col-lg-1">
+                        <div class="cell">.flexy-col-lg-1</div>
+                     </div>
+                </div>
+                <div class="flexy-row">
+                    <div class="flexy-col-lg-6">
+                        <div class="cell">.flexy-col-lg-6</div>
+                     </div>
+                </div>
+            </div>
+
+            <div class="flexy-grid">
+                <div class="flexy-row">
+                    <div class="flexy-col-xs-6">
+                        <h3>Auto Columns, Packed Columns</h3>
+                        <p>
+                            Sometimes it might be desirable to just throw a
+                            bunch of columns at a grid, letting them grow as
+                            necessary. It may also be desirable to have columns
+                            which only take up as much space as required for
+                            the content. To achieve this, we have two concepts,
+                            the first being auto columns, and the second being
+                            packed columns. Auto columns are specified with the
+                            <code>.flexy-col-XX</code> class, and packed
+                            columns with the <code>.flexy-col-XX-packed</code>
+                            class.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flexy-grid flexy-gutters">
+                <div class="flexy-row">
+                    <div class="flexy-col-xs-packed">
+                        <div class="cell">.flexy-col-xs-packed</div>
+                    </div>
+                    <div class="flexy-col-xs">
+                        <div class="cell">.flexy-col-xs</div>
+                    </div>
+                </div>
+                <div class="flexy-row">
+                    <div class="flexy-col-sm">
+                        <div class="cell">.flexy-col-sm</div>
+                    </div>
+                    <div class="flexy-col-sm-packed">
+                        <div class="cell">.flexy-col-sm-packed</div>
+                    </div>
+                </div>
+                <div class="flexy-row">
+                    <div class="flexy-col-md-packed">
+                        <div class="cell">.flexy-col-md-packed</div>
+                    </div>
+                    <div class="flexy-col-md">
+                        <div class="cell">.flexy-col-md</div>
+                    </div>
+                </div>
+                <div class="flexy-row">
+                    <div class="flexy-col-lg">
+                        <div class="cell">.flexy-col-lg</div>
+                    </div>
+                    <div class="flexy-col-lg-packed">
+                        <div class="cell">.flexy-col-lg-packed</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flexy-grid">
+                <div class="flexy-row">
+                    <div class="flexy-col-xs-6">
+                        <h3>Justification</h3>
+                        <p>
+                            If a row doesn't have enough content to fill it,
+                            you can specify how you want the empty space to be
+                            distributed with one of the following five options
+                            (20 with the breakpoint specific versions).
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flexy-grid flexy-gutters">
+                <div class="flexy-row flexy-row-xs-start">
+                    <div class="flexy-col-xs-packed">
+                        <div class="cell">.flexy-row-xs-start</div>
+                    </div>
+                    <div class="flexy-col-xs-packed">
+                        <div class="cell">.flexy-row-xs-start</div>
+                    </div>
+                </div>
+                <div class="flexy-row flexy-row-xs-center">
+                    <div class="flexy-col-xs-packed">
+                        <div class="cell">flexy-row-xs-center</div>
+                    </div>
+                    <div class="flexy-col-xs-packed">
+                        <div class="cell">flexy-row-xs-center</div>
+                    </div>
+                </div>
+                <div class="flexy-row flexy-row-xs-end">
+                    <div class="flexy-col-xs-packed">
+                        <div class="cell">flexy-row-xs-end</div>
+                    </div>
+                    <div class="flexy-col-xs-packed">
+                        <div class="cell">flexy-row-xs-end</div>
+                    </div>
+                </div>
+                <div class="flexy-row flexy-row-xs-around">
+                    <div class="flexy-col-xs-packed">
+                        <div class="cell">flexy-row-xs-around</div>
+                    </div>
+                    <div class="flexy-col-xs-packed">
+                        <div class="cell">flexy-row-xs-around</div>
+                    </div>
+                </div>
+                <div class="flexy-row flexy-row-xs-between">
+                    <div class="flexy-col-xs-packed">
+                        <div class="cell">flexy-row-xs-between</div>
+                    </div>
+                    <div class="flexy-col-xs-packed">
+                        <div class="cell">flexy-row-xs-between</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flexy-grid">
+                <div class="flexy-row">
+                    <div class="flexy-col-xs-6">
+                        <h3>Vertical Alignment</h3>
+                        <p>
+                            If items within a row differ in height, you can
+                            choose how to align the items within a row
+                            vertically by specyfing one of the following five
+                            options (20 with the breakpoint specific versions).
+                    </div>
+                </div>
+            </div>
+            <div class="flexy-grid flexy-gutters">
+                <div class="flexy-row flexy-row-xs-top">
+                    <div class="flexy-col-xs-3">
+                        <div class="cell">A<br>Tall<br>Item</div>
+                    </div>
+                    <div class="flexy-col-xs-3">
+                        <div class="cell">flexy-row-xs-top</div>
+                    </div>
+                </div>
+                <div class="flexy-row flexy-row-xs-middle">
+                    <div class="flexy-col-xs-3">
+                        <div class="cell">A<br>Tall<br>Item</div>
+                    </div>
+                    <div class="flexy-col-xs-3">
+                        <div class="cell">flexy-row-xs-middle</div>
+                    </div>
+                </div>
+                <div class="flexy-row flexy-row-xs-bottom">
+                    <div class="flexy-col-xs-3">
+                        <div class="cell">A<br>Tall<br>Item</div>
+                    </div>
+                    <div class="flexy-col-xs-3">
+                        <div class="cell">flexy-row-xs-bottom</div>
+                    </div>
+                </div>
+                <div class="flexy-row flexy-row-xs-baseline">
+                    <div class="flexy-col-xs-3">
+                        <div class="cell">A<br>Tall<br>Item</div>
+                    </div>
+                    <div class="flexy-col-xs-3">
+                        <div class="cell">flexy-row-xs-baseline</div>
+                    </div>
+                </div>
+                <div class="flexy-row flexy-row-xs-stretch">
+                    <div class="flexy-col-xs-3">
+                        <div class="cell">A<br>Tall<br>Item</div>
+                    </div>
+                    <div class="flexy-col-xs-3">
+                        <div class="cell">
+                            flexy-row-xs-stretch
+                            <a href="https://code.google.com/p/chromium/issues/detail?id=341310" title="Broken in Chrome">*</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flexy-grid">
+                <div class="flexy-row">
+                    <div class="flexy-col-xs-6">
+                        <h3>Ordering</h3>
+                        <p>
+                            A given item within a row can be pulled to the
+                            start or the end using the following two options
+                            (eight with the breakpoint specific versions).
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flexy-grid flexy-gutters">
+                <div class="flexy-row">
+                    <div class="flexy-col-xs-1">
+                        <div class="cell">1</div>
+                    </div>
+                    <div class="flexy-col-xs-1">
+                        <div class="cell">2</div>
+                    </div>
+                    <div class="flexy-col-xs-1">
+                        <div class="cell">3</div>
+                    </div>
+                    <div class="flexy-col-xs-1">
+                        <div class="cell">4</div>
+                    </div>
+                    <div class="flexy-col-xs-1">
+                        <div class="cell">5</div>
+                    </div>
+                    <div class="flexy-col-xs-1">
+                        <div class="cell">6</div>
+                    </div>
+                </div>
+                <div class="flexy-row">
+                    <div class="flexy-col-xs-1 flexy-col-xs-last">
+                        <div class="cell">1 (flexy-col-xs-last)</div>
+                    </div>
+                    <div class="flexy-col-xs-1">
+                        <div class="cell">2</div>
+                    </div>
+                    <div class="flexy-col-xs-1 flexy-col-xs-first">
+                        <div class="cell">3 (flexy-col-xs-first)</div>
+                    </div>
+                    <div class="flexy-col-xs-1">
+                        <div class="cell">4</div>
+                    </div>
+                    <div class="flexy-col-xs-1">
+                        <div class="cell">5</div>
+                    </div>
+                    <div class="flexy-col-xs-1">
+                        <div class="cell">6</div>
+                    </div>
+                </div>
+                <div class="flexy-row">
+                    <div class="flexy-col-xs-1">
+                        <div class="cell">1</div>
+                    </div>
+                    <div class="flexy-col-xs-1">
+                        <div class="cell">2</div>
+                    </div>
+                    <div class="flexy-col-xs-1 flexy-col-xs-last">
+                        <div class="cell">3 (flexy-col-xs-last)</div>
+                    </div>
+                    <div class="flexy-col-xs-1">
+                        <div class="cell">4</div>
+                    </div>
+                    <div class="flexy-col-xs-1">
+                        <div class="cell">5</div>
+                    </div>
+                    <div class="flexy-col-xs-1">
+                        <div class="cell">6</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flexy-grid">
+                <div class="flexy-row">
+                    <div class="flexy-col-xs-6">
+                        <h3>Nesting</h3>
+                        <p>
+                            Grids can be nested to an arbitrary depth.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="flexy-grid flexy-gutters">
+                <div class="flexy-row">
+                    <div class="flexy-col-xs-3">
+                        <div class="cell">
+                            <div class="flexy-grid flexy-gutters">
+                                <div class="flexy-row">
+                                    <div class="flexy-col-xs-3">
+                                        <div class="cell">
+                                            <div class="flexy-grid flexy-gutters">
+                                                <div class="flexy-row">
+                                                    <div class="flexy-col-xs-3">
+                                                        <div class="cell">a</div>
+                                                    </div>
+                                                    <div class="flexy-col-xs-3">
+                                                        <div class="cell">b</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flexy-col-xs-3">
+                                        <div class="cell">c</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flexy-col-xs-3">
+                        <div class="cell">
+                            <div class="flexy-grid flexy-gutters">
+                                <div class="flexy-row">
+                                    <div class="flexy-col-sm-2">
+                                        <div class="cell">d</div>
+                                    </div>
+                                    <div class="flexy-col-sm-2">
+                                        <div class="cell">e</div>
+                                    </div>
+                                    <div class="flexy-col-sm-2">
+                                        <div class="cell">f</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flexy-grid">
+                <div class="flexy-row">
+                    <div class="flexy-col-xs-6">
+                        <h3>Others</h3>
+                        <ul>
+                            <li>text alignment</li>
+                            <li>multiple breakpoint definitions at once</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

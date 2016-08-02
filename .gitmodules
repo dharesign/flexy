@@ -1,0 +1,6 @@
+[submodule "css/flexy"]
+	path = css/flexy
+	url = https://github.com/dharesign/flexy
+[submodule "css/clicky"]
+	path = css/clicky
+	url = https://github.com/dharesign/clicky
